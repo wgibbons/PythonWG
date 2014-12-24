@@ -1,0 +1,37 @@
+#ZelleChapt8#6Finding_More_Primes.py
+# A program to find prime numbers less than n
+def numbers (c):
+    while c <= 10000:
+        c = c + 1
+        return c
+    
+def prime(a):
+    n = 2
+    square_root = a ** 0.5
+    while n <= square_root:
+        non_prime = 1
+        if a%n == 0:
+            non_prime = 2
+            n = square_root + 1
+        else:
+            n  = n + 1
+    if non_prime == 2:
+        return "no"
+    else:
+        return "yes"
+
+def main():
+    print ("This is a program to calculate all of the prime numbers")
+    print("less than or equal to a value n")
+    limit = eval(input("Please enter your value of n:"))
+    b = 4
+    while b <= limit:
+        prime_eval = prime(b)
+        if prime_eval == "no":
+            b = b + 1
+        else:
+            print (b)
+            b = b + 1
+    
+            
+main()
